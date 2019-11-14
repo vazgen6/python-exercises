@@ -1,14 +1,19 @@
-fileRef = open('olympics.txt', 'r')
-# lines = fileRef.readlines()
-for l in fileRef:
-    print(l.strip())
-fileRef.close()
 
-fileRef = open('test.txt', 'w')
-fileRef.read
-fileRef.write('hello, world1')
-fileRef.read
+nested = [['dog', 'cat', 'horse'], ['frog', 'turtle',
+                                    'snake', 'gecko'], ['hamster', 'gerbil', 'rat', 'ferret']]
 
-file = open('')
 
-fileRef.readline
+def findWord(arr, word):
+    for i in arr:
+        if type(arr[0]) == list:
+            foundWord = findWord(i, word)
+            if foundWord:
+                return foundWord
+        else:
+            if word in i:
+                return word
+
+
+output = findWord(nested, 'snake')
+
+print(output)

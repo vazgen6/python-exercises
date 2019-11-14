@@ -7,7 +7,7 @@ my_grades = {
 # From Section 11.5 of:
 # Downey, A. (2015). Think Python: How to think like a computer scientist. Needham, Massachusetts: Green Tree Press.
 
-print(my_grades)
+# print(my_grades)
 
 def invert_dict(d):
     inverse = dict()
@@ -20,11 +20,15 @@ def invert_dict(d):
                 inverse[grade].append(key)
     return inverse
 
-grades = invert_dict(my_grades)
+dic = invert_dict({'1': '10', '2': '10', '3': '20'})
 
-print(grades)
+print(dic)
+# print(invert_dict({'1': 10, '2': 10, '3': 20}))
+# grades = invert_dict(my_grades)
 
-with open('grades.csv', 'w') as file:
-    file.write('grade, assignment(s)\n')
-    for g in sorted (grades):
-        file.write('{}, {}\n'.format(g, grades[g]))
+# print(grades)
+
+# with open('grades.csv', 'w') as file:
+#     file.write('grade, assignment(s)\n')
+#     for g in sorted (grades):
+#         file.write('{}, {}\n'.format(g, grades[g]))
